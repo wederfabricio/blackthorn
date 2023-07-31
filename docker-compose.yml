@@ -10,6 +10,9 @@ services:
     ports:
       - 8000:8000
     command: yarn dev
+    depends_on:
+      - mongodb
+      - mongodbtest
 
   mongodb:
     image: mongo:6
