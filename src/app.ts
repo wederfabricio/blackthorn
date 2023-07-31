@@ -1,13 +1,15 @@
-import express, { Router, Request, Response } from "express";
+import express, { Router, Response } from "express";
+import cartRouter from "@/router/cart";
 
 const app = express();
-const route = Router();
+const indexRouter = Router();
 app.use(express.json());
 
-route.get("/", (req: Request, res: Response) => {
-  res.json({ message: "Hello world!" });
+indexRouter.get("/", (_, res: Response) => {
+  res.json({ message: "API is running!" });
 });
 
-app.use(route);
+app.use(indexRouter);
+app.use(cartRouter);
 
 export default app;
