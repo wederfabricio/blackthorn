@@ -2,6 +2,8 @@
 
 ## Getting started
 
+- Copy the .env.example file to .env;
+
 - Run `docker compose up` to start on development mode with Nodemon;
 
   Note: The app will start on port 8000.
