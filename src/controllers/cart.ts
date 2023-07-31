@@ -23,7 +23,7 @@ export async function getId(request: Request, response: Response) {
     return response.status(200).send(cart);
   } catch (e) {
     return response
-      .status(400)
+      .status(404)
       .send({ error: { message: `Fail to get cart by ID "${id}": ${e}` } });
   }
 }
