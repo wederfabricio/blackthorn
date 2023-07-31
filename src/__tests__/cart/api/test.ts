@@ -49,4 +49,9 @@ describe("Cart API", () => {
     expect(response.body).toHaveLength(1);
     expect(response.body).toMatchObject([cartData]);
   });
+
+  test("Searching for a inexistent cart ID", async () => {
+    const responseGet = await request(app).get(`${url}/inexistent-cart-id`);
+    expect(responseGet.statusCode).toBe(400);
+  });
 });

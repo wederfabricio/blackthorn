@@ -16,7 +16,16 @@ export async function create(request: Request, response: Response) {
 
 export async function getId(request: Request, response: Response) {
   const repository = new CartRepository();
-  return response.status(200).send(await repository.getId(request.params.id));
+  const id = request.params.id;
+
+  try {
+    const cart = await repository.getId(id);
+    return response.status(200).send(cart);
+  } catch (e) {
+    return response
+      .status(400)
+      .send({ error: { message: `Fail to get cart by ID "${id}": ${e}` } });
+  }
 }
 
 export async function getAll(_: Request, response: Response) {
