@@ -7,7 +7,7 @@ describe("API", () => {
 
     expect(response.statusCode).toBe(200);
     expect(response.body).toEqual({
-      message: "Hello world!",
+      message: "API is running!",
     });
   });
 });
