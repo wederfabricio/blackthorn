@@ -9,7 +9,7 @@ services:
       - ./:/app
     ports:
       - 8000:8000
-    command: yarn dev
+    command: sh -c "yarn ; yarn dev"
     depends_on:
       - mongodb
       - mongodbtest
