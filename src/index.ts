@@ -1,3 +1,6 @@
-import app from "./app";
+import app from "@/app";
+import { databaseConnect } from "@/connection";
 
-app.listen(8000, () => console.log("Running API on port 8000"));
+databaseConnect().then(() => {
+  app.listen(8000, () => console.log("Running API on port 8000"));
+});
