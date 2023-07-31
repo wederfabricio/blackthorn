@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "nodemon -e ts,js --exec ts-node -r tsconfig-paths/register ./src/index.ts",
     "typecheck": "tsc --noEmit",
-    "test": "ENVIRONMENT=testing jest --coverage"
+    "test": "ENVIRONMENT=testing jest --coverage",
+    "seeder": "ts-node -r tsconfig-paths/register ./src/database/seeder.ts"
   },
   "author": "Weder Fabricio Lopes",
   "license": "ISC",
