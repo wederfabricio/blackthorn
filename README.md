@@ -25,6 +25,11 @@
 - Using dotenv to configure environment variables;
 - Using tsconfig-paths to configure `paths` correctly to Nodemon;
 
+### Database
+
+- MongoDB as selected database;
+- mongo-express, a web-based MongoDB admin interface to show collections;
+
 ### Tests
 
 - Jest test framework with ts-jest;
