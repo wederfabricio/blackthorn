@@ -17,6 +17,7 @@
 ### API
 
 - Using Express to routing listened connections;
+- Swagger to documentation;
 
 ### Development
 
@@ -43,6 +44,12 @@ To run the environment and create data:
   docker compose up
   docker compose run yarn seeder
 ```
+
+### Using Swagger
+
+Enjoy using [localhost:8000/api-docs](http://localhost:8000/api-docs)
+
+### Manually
 
 - Open [localhost:8000](http://localhost:8000) and see API Running;
 
