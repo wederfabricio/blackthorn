@@ -1,8 +1,4 @@
-import dotenv from "dotenv";
-
-const env = dotenv.config({
-  path: process.env.ENVIRONMENT === "testing" ? "./.env.testing" : "./.env",
-});
+import { env } from ".";
 
 const mongoUsername = env.parsed?.MONGO_INITDB_ROOT_USERNAME;
 const mongoPassword = env.parsed?.MONGO_INITDB_ROOT_PASSWORD;
